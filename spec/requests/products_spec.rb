@@ -29,7 +29,10 @@ RSpec.describe "Products", type: :request do
       post "/products", params: product_params
       product = Product.first
       expect(response).to have_http_status(200)
+      expect(product["title"]).to eq "Best Product Ever"
+      expect(product["description"]).to eq "This is the best product ever, please buy now!"
       expect(product["price"]).to eq 420
+
     end
   end
 end
