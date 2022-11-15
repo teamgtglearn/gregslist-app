@@ -12,7 +12,12 @@ class ProductsController < ApplicationController
         render json: product.errors, status: 422
       end
     end
-
+    
+    def update
+      product = Product.find(params[:id])
+      product.update(product_params)
+      render json: product
+    end
 
     private
 
