@@ -35,4 +35,38 @@ RSpec.describe "Products", type: :request do
 
     end
   end
+
+  describe "PATCH /update" do
+    it "Update a product" do
+      product_params ={
+        product: {
+          title: "Best Product Ever",
+          description: "This is the best product ever, please buy now!",
+          price: 420,
+          image: "https://static.pokebattler.com/pokemon/moltres.svg",
+          user_id: user.id
+        } 
+      }
+
+      post "/products", params: product_params
+      product = Product.first
+      
+      updated_product_params ={
+        product: {
+          title: "Best Product Ever and ever",
+          description: "This is the best product ever, please buy now!",
+          price: 888,
+          image: "https://static.pokebattler.com/pokemon/moltres.svg",
+          user_id: user.id
+        } 
+      }
+
+      put "/products/#{product.id}" , params: updated_product_params
+
+      updated_product = Product.first 
+      expect(updated_product.title).to eq("Best Product Ever and ever")
+      expect(updated_product.price).to eq 888
+
+    end
+  end
 end
