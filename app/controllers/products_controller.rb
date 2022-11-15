@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
     if product.destroy
       render json: product
     else
-      render json: apartment.errors, status: 422
+      render json: product.errors, status: 422
     end
   end
 
