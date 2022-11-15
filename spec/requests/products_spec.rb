@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Products", type: :request do
-  let(:user) { User.create email: "test@example.com", password: "password", password_confirmation: "password" }
+  let(:user) { User.create email: "guandoge@chan.com", password: "password", password_confirmation: "password" }
 
 
   describe "GET /index" do
