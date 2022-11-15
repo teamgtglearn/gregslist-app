@@ -1,22 +1,21 @@
 import React from "react";
-import {
-  Container,
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Row,
-  Col,
-} from "reactstrap";
+import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap";
+import logo from "../assets/gregslist-logo.png";
 
 const Header = () => {
   return (
     <Row>
       <Col md={6} style={{ display: "flex", alignItems: "center" }}>
-        GREGS HEAD GOES HERE
+        <img id="logo" src={logo} />
       </Col>
-      <Col md={6} style={{ display: "flex", alignItems: "center" }}>
+      <Col
+        md={6}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-end",
+        }}
+      >
         <Form>
           <Row className="pr-o">
             <Col md={5}>
