@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Components/Header";
 import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
@@ -11,10 +11,24 @@ import ProductNew from "./Pages/ProductNew";
 import AboutUs from "./Pages/AboutUs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container, Row } from "reactstrap";
-import data from "./mockProducts";
 import "./App.css";
 
 const App = () => {
+  const [products, setProducts] = useState([])
+
+  useEffect(() =>{
+    readProducts()
+  },[])
+  
+  const readProducts = () =>{
+    fetch("/products")
+    .then((response) => response.json())
+    .then((data) => {
+      setProducts(data)
+    })
+    .catch((error) => console.log(error))
+  }
+
   return (
     <BrowserRouter>
       <Container
@@ -36,7 +50,7 @@ const App = () => {
             <Route exact path="/" element={<Home />}></Route>
             <Route
               path="/index"
-              element={<ProductIndex products={data} />}
+              element={<ProductIndex products={products} />}
             ></Route>
             <Route path="/show" element={<ProductShow />}></Route>
             <Route path="/edit" element={<ProductEdit />}></Route>
