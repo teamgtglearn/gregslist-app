@@ -11,6 +11,7 @@ import ProductNew from "./Pages/ProductNew";
 import AboutUs from "./Pages/AbuoutUs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container, Row } from "reactstrap";
+import data from "./mockProducts";
 import "./App.css";
 
 const App = () => {
@@ -27,10 +28,16 @@ const App = () => {
         <Row className="bg-light" style={{ height: "3vh" }}>
           <Navigation />
         </Row>
-        <Row className="bg-light" style={{ height: "75vh" }}>
+        <Row
+          className="bg-light"
+          style={{ display: "flex", minHeight: "75vh" }}
+        >
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
-            <Route path="/index" element={<ProductIndex />}></Route>
+            <Route
+              path="/index"
+              element={<ProductIndex products={data} />}
+            ></Route>
             <Route path="/show" element={<ProductShow />}></Route>
             <Route path="/edit" element={<ProductEdit />}></Route>
             <Route path="/new" element={<ProductNew />}></Route>

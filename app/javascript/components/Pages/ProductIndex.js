@@ -9,23 +9,26 @@ import {
   Button,
 } from "reactstrap";
 
-const ProductIndex = () => {
+const ProductIndex = ({ products }) => {
   return (
-    <Row>
-      <Col md={4}>
-        <Card
-          style={{
-            width: "10rem",
-          }}
-        >
-          <img alt="Sample" src="https://picsum.photos/300/200" />
-          <CardBody>
-            <CardTitle tag="h5">Happy Toy</CardTitle>
-            <CardText className="text-left">$524</CardText>
-            <Button>Buy</Button>
-          </CardBody>
-        </Card>
-      </Col>
+    <Row style={{ display: "flex", flexWrap: "wrap", paddingRight: "4rem" }}>
+      {products?.map((product, idx) => (
+        <Col key={idx} style={{ width: "15rem", margin: "2rem" }}>
+          <Card
+            style={{
+              width: "15rem",
+              margin: "2rem",
+            }}
+          >
+            <img alt="Sample" src={product.image} />
+            <CardBody>
+              <CardTitle tag="h5">{product.title}</CardTitle>
+              <CardText className="text-left">{product.price}</CardText>
+              <Button>Buy</Button>
+            </CardBody>
+          </Card>
+        </Col>
+      ))}
     </Row>
   );
 };
