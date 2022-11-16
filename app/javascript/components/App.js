@@ -8,7 +8,7 @@ import ProductEdit from "./Pages/ProductEdit";
 import ProductShow from "./Pages/ProductShow";
 import ProductIndex from "./Pages/ProductIndex";
 import ProductNew from "./Pages/ProductNew";
-import AboutUs from "./Pages/AbuoutUs";
+import AboutUs from "./Pages/AboutUs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container, Row } from "reactstrap";
 import "./App.css";
@@ -27,7 +27,7 @@ const App = () => {
         <Row className="bg-light" style={{ height: "3vh" }}>
           <Navigation />
         </Row>
-        <Row className="bg-light" style={{ height: "75vh" }}>
+        <Row className="bg-light" style={{ minHeight: "75vh" }}>
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
             <Route path="/index" element={<ProductIndex />}></Route>
