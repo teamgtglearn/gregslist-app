@@ -23,8 +23,10 @@ const ProductIndex = ({ products }) => {
             <img alt="Sample" src={product.image} />
             <CardBody>
               <CardTitle tag="h5">{product.title}</CardTitle>
-              <CardText className="text-left">{product.price}</CardText>
-              <Button>Buy</Button>
+              <CardText className="text-left"> Ð: {product.price}</CardText>
+              <a href={`/show/${product.id}`}>
+                <Button>Buy</Button>
+              </a>
             </CardBody>
           </Card>
         </Col>

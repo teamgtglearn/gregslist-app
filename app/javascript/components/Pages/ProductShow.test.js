@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import ProductIndex from "./ProductIndex";
+import ProductShow from "./ProductShow";
 
 describe("<ProductIndex />", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    render(<ProductIndex />, div);
+    render(<ProductShow />, div);
   });
 });
