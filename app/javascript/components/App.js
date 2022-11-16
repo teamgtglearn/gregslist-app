@@ -8,7 +8,7 @@ import ProductEdit from "./Pages/ProductEdit";
 import ProductShow from "./Pages/ProductShow";
 import ProductIndex from "./Pages/ProductIndex";
 import ProductNew from "./Pages/ProductNew";
-import AboutUs from "./Pages/AbuoutUs";
+import AboutUs from "./Pages/AboutUs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container, Row } from "reactstrap";
 import data from "./mockProducts";
