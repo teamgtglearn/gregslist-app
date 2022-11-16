@@ -9,7 +9,12 @@ body {
   max-height: 80%;
 }
 
-/* Login Form */
+/* Login Buttons */
+#login-btns {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
 
 /* Nav Links */
 

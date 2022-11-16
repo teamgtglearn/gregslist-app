@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Components/Header";
-import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
 import NotFound from "./Pages/NotFound";
@@ -13,21 +12,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container, Row } from "reactstrap";
 import "./App.css";
 
-const App = () => {
-  const [products, setProducts] = useState([])
+const App = (props) => {
+  const [products, setProducts] = useState([]);
 
-  useEffect(() =>{
-    readProducts()
-  },[])
-  
-  const readProducts = () =>{
+  useEffect(() => {
+    readProducts();
+  }, []);
+
+  const readProducts = () => {
     fetch("/products")
-    .then((response) => response.json())
-    .then((data) => {
-      setProducts(data)
-    })
-    .catch((error) => console.log(error))
-  }
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(data);
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <BrowserRouter>
@@ -37,10 +36,7 @@ const App = () => {
         style={{ display: "block", width: "70vw", backgroundColor: "gray" }}
       >
         <Row className="bg-light" style={{ maxHeight: "12vh" }}>
-          <Header />
-        </Row>
-        <Row className="bg-light" style={{ height: "3vh" }}>
-          <Navigation />
+          <Header {...props} />
         </Row>
         <Row
           className="bg-light"
