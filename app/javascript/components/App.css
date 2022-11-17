@@ -6,7 +6,9 @@ body {
 
 /* Gregslist logo */
 #logo {
-  max-height: 80%;
+  max-width: 80%;
+  height: auto;
+  padding: 1rem;
 }
 
 /* Login Buttons */

@@ -14,10 +14,20 @@ import "./App.css";
 
 const App = (props) => {
   const [products, setProducts] = useState([]);
-
+  const [currentUserProducts, setCurrentUserProducts] = useState("");
+  console.log(props);
   useEffect(() => {
     readProducts();
   }, []);
+
+  useEffect(() => {
+    if (logged_in) {
+      let currentArr = products.find(
+        (product) => product.user_id == current_user.id
+      );
+      setCurrentUserProducts(currentArr);
+    }
+  }, [props]);
 
   const readProducts = () => {
     fetch("/products")
@@ -39,16 +49,23 @@ const App = (props) => {
           <Header {...props} />
         </Row>
         <Row
-          className="bg-light"
+          className="bg-light border"
           style={{ display: "flex", minHeight: "75vh" }}
         >
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
+            <Route path="/index" element={<ProductIndex products={products} />}>
+              <Route
+                path="/:userId"
+                element={
+                  <ProductIndex currentUserProducts={currentUserProducts} />
+                }
+              ></Route>
+            </Route>
             <Route
-              path="/index"
-              element={<ProductIndex products={products} />}
+              path="/show/:id"
+              element={<ProductShow products={products} />}
             ></Route>
-            <Route path="/show/:id" element={<ProductShow products={products}/>}></Route>
             <Route path="/edit" element={<ProductEdit />}></Route>
             <Route path="/new" element={<ProductNew />}></Route>
             <Route path="/about" element={<AboutUs />}></Route>
