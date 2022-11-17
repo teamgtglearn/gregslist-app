@@ -85,7 +85,7 @@ const Navigation = ({
             </NavItem>
             <NavItem>
               <NavLink
-                to="/index"
+                to={"/index/" + current_user.id}
                 className="py-0 px-3"
                 style={{ color: "black", fontSize: "small" }}
               >

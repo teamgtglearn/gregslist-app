@@ -6,6 +6,7 @@ import NotFound from "./Pages/NotFound";
 import ProductEdit from "./Pages/ProductEdit";
 import ProductShow from "./Pages/ProductShow";
 import ProductIndex from "./Pages/ProductIndex";
+import ProductUserIndex from "./Pages/ProductUserIndex";
 import ProductNew from "./Pages/ProductNew";
 import AboutUs from "./Pages/AboutUs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -14,20 +15,19 @@ import "./App.css";
 
 const App = (props) => {
   const [products, setProducts] = useState([]);
-  const [currentUserProducts, setCurrentUserProducts] = useState("");
   console.log(props);
   useEffect(() => {
     readProducts();
   }, []);
 
-  useEffect(() => {
-    if (logged_in) {
-      let currentArr = products.find(
-        (product) => product.user_id == current_user.id
-      );
-      setCurrentUserProducts(currentArr);
-    }
-  }, [props]);
+  // useEffect(() => {
+
+  //     let currentArr = products.find(
+  //       (product) => product.user_id == props.current_user.id
+  //     );
+  //     setCurrentUserProducts(currentArr);
+  //   }
+  // }, [props]);
 
   const readProducts = () => {
     fetch("/products")
@@ -54,14 +54,14 @@ const App = (props) => {
         >
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
-            <Route path="/index" element={<ProductIndex products={products} />}>
-              <Route
-                path="/:userId"
-                element={
-                  <ProductIndex currentUserProducts={currentUserProducts} />
-                }
-              ></Route>
-            </Route>
+            <Route
+              path="/index"
+              element={<ProductIndex products={products} />}
+            ></Route>
+            <Route
+              path="/index/:userId"
+              element={<ProductUserIndex products={products} />}
+            ></Route>
             <Route
               path="/show/:id"
               element={<ProductShow products={products} />}
