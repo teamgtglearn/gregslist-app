@@ -24,7 +24,7 @@ const App = (props) => {
     
     if (props.logged_in) {
       let currentArr = products.find(
-        (product) => product.user_id == props.current_user.id
+        (product) => product.user_id === props.current_user.id
       );
       setCurrentUserProducts(currentArr);
     }
@@ -40,7 +40,6 @@ const App = (props) => {
   };
 
   const addProducts =(newProduct) => {
-    console.log(newProduct)
     fetch("/products",{
       body: JSON.stringify(newProduct),
       headers:{
