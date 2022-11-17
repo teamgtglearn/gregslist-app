@@ -21,9 +21,10 @@ const App = (props) => {
   }, []);
 
   useEffect(() => {
-    if (logged_in) {
+    
+    if (props.logged_in) {
       let currentArr = products.find(
-        (product) => product.user_id == current_user.id
+        (product) => product.user_id == props.current_user.id
       );
       setCurrentUserProducts(currentArr);
     }
@@ -37,6 +38,20 @@ const App = (props) => {
       })
       .catch((error) => console.log(error));
   };
+
+  const addProducts =(newProduct) => {
+    console.log(newProduct)
+    fetch("/products",{
+      body: JSON.stringify(newProduct),
+      headers:{
+        "Content-Type" : "application/json"
+      },
+      method: "POST"
+    })
+    .then((response) => response.json())
+    .then(() => readProducts())
+    .catch((errors) => console.log("errors",errors))
+  }
 
   return (
     <BrowserRouter>
@@ -56,7 +71,7 @@ const App = (props) => {
             <Route exact path="/" element={<Home />}></Route>
             <Route path="/index" element={<ProductIndex products={products} />}>
               <Route
-                path="/:userId"
+                path="/index/:userId"
                 element={
                   <ProductIndex currentUserProducts={currentUserProducts} />
                 }
@@ -67,7 +82,7 @@ const App = (props) => {
               element={<ProductShow products={products} />}
             ></Route>
             <Route path="/edit" element={<ProductEdit />}></Route>
-            <Route path="/new" element={<ProductNew />}></Route>
+            <Route path="/new" element={<ProductNew addProducts={addProducts} props={props} />}></Route>
             <Route path="/about" element={<AboutUs />}></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
