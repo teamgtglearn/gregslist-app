@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-user = User.where(email: "guandoge@chan.com").first_or_create(password: "123password", password_confirmation: "123password")
+user = User.where(email: "guandoge@chan.com").first_or_create(password: "password123", password_confirmation: "password123")
 
 product_seeds = {
 
