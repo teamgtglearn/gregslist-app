@@ -20,15 +20,6 @@ const App = (props) => {
     readProducts();
   }, []);
 
-  // useEffect(() => {
-
-  //     let currentArr = products.find(
-  //       (product) => product.user_id == props.current_user.id
-  //     );
-  //     setCurrentUserProducts(currentArr);
-  //   }
-  // }, [props]);
-
   const readProducts = () => {
     fetch("/products")
       .then((response) => response.json())
