@@ -11,7 +11,7 @@ describe("<ProductNew />", (props) => {
     let newUser = {current_user: {id: 1, email: 'guandoge@chan.com', created_at: '2022-11-14T21:09:21.582Z', updated_at: '2022-11-14T21:09:21.582Z'}}
     render(
         <BrowserRouter>
-            <ProductNew current_user={newUser} />
+            <ProductNew props={newUser} />
         </BrowserRouter>
     );
     // screen.debug()
@@ -24,7 +24,7 @@ describe("<ProductNew />", (props) => {
 
     render(
     <BrowserRouter>
-     <ProductNew current_user={newUser}/>
+     <ProductNew props={newUser}/>
     </BrowserRouter>
    )
     const newTitle = screen.getByText("Product Title")
