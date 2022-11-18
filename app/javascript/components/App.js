@@ -15,7 +15,6 @@ import "./App.css";
 
 const App = (props) => {
   const [products, setProducts] = useState([]);
-  console.log(props);
   useEffect(() => {
     readProducts();
   }, []);
@@ -28,7 +27,7 @@ const App = (props) => {
       })
       .catch((error) => console.log(error));
   };
-
+  
   const addProducts = (newProduct) => {
     fetch("/products", {
       body: JSON.stringify(newProduct),
@@ -40,6 +39,13 @@ const App = (props) => {
       .then((response) => response.json())
       .then(() => readProducts())
       .catch((errors) => console.log("errors", errors));
+  };
+
+  const deleteProduct = (id) => {
+    fetch(`/products/${id}`, { method: "DELETE" })
+      .then((response) => response.json())
+      .then(() => readProducts())
+      .catch((errors) => console.log(errors));
   };
 
   return (
@@ -67,7 +73,12 @@ const App = (props) => {
             ></Route>
             <Route
               path="/index/:id"
-              element={<ProductUserIndex products={products} />}
+              element={
+                <ProductUserIndex
+                  products={products}
+                  deleteProduct={deleteProduct}
+                />
+              }
             ></Route>
             <Route
               path="/show/:id"
