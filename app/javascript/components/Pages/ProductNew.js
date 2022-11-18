@@ -3,7 +3,7 @@ import { Form, FormGroup, Label, Col, Input, Button } from "reactstrap";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const ProductNew = ({ addProducts, current_user }) => {
+const ProductNew = ({ addProducts, props: {current_user} }) => {
 
   const navigate = useNavigate()
 
@@ -12,7 +12,7 @@ const ProductNew = ({ addProducts, current_user }) => {
     description:"",
     price:0,
     image:"",
-    user_id:current_user.id
+    user_id: current_user.id
   })
 
 
@@ -21,6 +21,7 @@ const ProductNew = ({ addProducts, current_user }) => {
   }
 
   const handleSubmit = () => {
+    console.log(newProduct)
     addProducts(newProduct)
     navigate("/index")
   }
