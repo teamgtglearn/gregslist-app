@@ -3,28 +3,23 @@ import { Form, FormGroup, Label, Col, Input, Button } from "reactstrap";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const ProductNew = ({ addProducts, props: {current_user} }) => {
+const ProductNew = ({ addProducts, props: { current_user } }) => {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
-
-  const[newProduct , setNewProduct] = useState({
-    title:"",
-    description:"",
-    price:0,
-    image:"",
-    user_id: current_user.id
-  })
-
+  const [newProduct, setNewProduct] = useState({});
 
   const handleChange = (e) => {
-    setNewProduct({ ...newProduct, [e.target.name]: e.target.value })
-  }
+    setNewProduct({
+      ...newProduct,
+      [e.target.name]: e.target.value,
+      user_id: current_user.id,
+    });
+  };
 
   const handleSubmit = () => {
-    console.log(newProduct)
-    addProducts(newProduct)
-    navigate("/index")
-  }
+    addProducts(newProduct);
+    navigate(`/index/${current_user.id}`);
+  };
 
   return (
     <Form className="p-5 m-5">
@@ -85,7 +80,7 @@ const ProductNew = ({ addProducts, props: {current_user} }) => {
         </Col>
       </FormGroup>
       <Button onClick={handleSubmit}> Add Product</Button>
-    </Form >
+    </Form>
   );
 };
 

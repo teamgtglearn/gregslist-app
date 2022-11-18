@@ -57,6 +57,11 @@ h3 {
 
 /* Product Cards */
 
+#product-card-image {
+  width: 15rem;
+  max-height: 15rem;
+}
+
 /*=================  FOOTER ================== */
 
 /* Text */
