@@ -9,8 +9,7 @@ describe("<Navigation />", () => {
     render(
       <BrowserRouter>
         <Navigation />
-      </BrowserRouter>,
-      div
+      </BrowserRouter>
     );
   });
 });

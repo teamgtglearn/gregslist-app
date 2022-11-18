@@ -8,7 +8,6 @@ const ProductShow = ({ products }) => {
 
   return (
     <div>
-      <h2>ProductShow</h2>
       <div>
         {currentProduct && (
           <Card style={{ width: "20rem" }}>

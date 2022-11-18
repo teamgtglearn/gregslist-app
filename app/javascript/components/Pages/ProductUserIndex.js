@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams, NavLink } from "react-router-dom";
 import {
   Row,
   Col,
@@ -13,9 +13,17 @@ import {
 const ProductUserIndex = ({ products }) => {
   const [currentUserProducts, setCurrentUserProducts] = useState([]);
   const { id } = useParams();
-  let currentArr = products?.filter((product) => product.user_id == id);
-  if (currentArr?.length > 0) return setCurrentUserProducts(currentArr);
 
+  useEffect(() => {
+    checkCurrentUserProducts();
+  }, [products]);
+
+  const checkCurrentUserProducts = () => {
+    let currentArr = products?.filter((product) =>
+      product.user_id == id ? product : null
+    );
+    if (currentArr?.length > 0) return setCurrentUserProducts(currentArr);
+  };
   return (
     <Row style={{ display: "flex", flexWrap: "wrap", paddingRight: "4rem" }}>
       {currentUserProducts.length !== 0 ? (
@@ -24,10 +32,14 @@ const ProductUserIndex = ({ products }) => {
             <Card
               style={{
                 width: "15rem",
+                minHeight: "25",
                 margin: "2rem",
               }}
             >
-              <img alt="Sample" src={product.image} />
+              <NavLink to={"/show/" + product.id} style={{ display: "flex" }}>
+                <img id="product-card-image" alt="Sample" src={product.image} />
+              </NavLink>
+
               <CardBody>
                 <CardTitle tag="h5">{product.title}</CardTitle>
                 <CardText className="text-left"> Ð: {product.price}</CardText>

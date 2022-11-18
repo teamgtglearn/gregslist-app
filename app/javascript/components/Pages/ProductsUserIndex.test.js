@@ -20,7 +20,6 @@ describe("<ProductUserIndex />", () => {
       let productTitle = screen.getByText(
         /You have no products listed. Do you see a problem?/i
       );
-      // let productTitle = screen.getByText(product.title);
       expect(productTitle).toBeInTheDocument();
     });
   });

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import {
   Row,
   Col,
@@ -20,12 +21,14 @@ const ProductIndex = ({ products }) => {
               margin: "2rem",
             }}
           >
-            <img alt="Sample" src={product.image} />
+            <NavLink to={"/show/" + product.id} style={{ display: "flex" }}>
+              <img id="product-card-image" alt="Sample" src={product.image} />
+            </NavLink>
             <CardBody>
               <CardTitle tag="h5">{product.title}</CardTitle>
               <CardText className="text-left"> Ð: {product.price}</CardText>
               <a href={`/show/${product.id}`}>
-                <Button>Buy</Button>
+                <Button>Contact Seller</Button>
               </a>
             </CardBody>
           </Card>
