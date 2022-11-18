@@ -9,7 +9,7 @@ const products = [
   },
   {
     id: 2,
-    title: "The Best Product",
+    title: "The Best Product2",
     description: "This is the best product ever and ever",
     price: 469,
     image: "https://i.imgur.com/u5rhMKt.jpg",
@@ -17,7 +17,7 @@ const products = [
   },
   {
     id: 3,
-    title: "The Best Product 1",
+    title: "The Best Product 3",
     description: "This is the best product ever and ever",
     price: 69,
     image: "https://i.imgur.com/u5rhMKt.jpg",
@@ -25,7 +25,7 @@ const products = [
   },
   {
     id: 4,
-    title: "The Best Product 1",
+    title: "The Best Product 4",
     description: "This is the best product ever and ever",
     price: 69,
     image: "https://i.imgur.com/u5rhMKt.jpg",
@@ -33,7 +33,7 @@ const products = [
   },
   {
     id: 5,
-    title: "The Best Product 1",
+    title: "The Best Product 7",
     description: "This is the best product ever and ever",
     price: 69,
     image: "https://i.imgur.com/u5rhMKt.jpg",
@@ -41,7 +41,7 @@ const products = [
   },
   {
     id: 6,
-    title: "The Best Product 1",
+    title: "The Best Product 8",
     description: "This is the best product ever and ever",
     price: 69,
     image: "https://i.imgur.com/u5rhMKt.jpg",
