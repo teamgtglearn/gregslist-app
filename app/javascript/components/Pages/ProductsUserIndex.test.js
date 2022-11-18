@@ -15,7 +15,6 @@ describe("<ProductUserIndex />", () => {
         <ProductUserIndex mockProducts={mockProducts} />
       </BrowserRouter>
     );
-    screen.debug();
     mockProducts.forEach(() => {
       let productTitle = screen.getByText(
         /You have no products listed. Do you see a problem?/i

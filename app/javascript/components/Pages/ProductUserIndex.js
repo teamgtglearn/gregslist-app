@@ -30,9 +30,10 @@ const ProductUserIndex = ({ products }) => {
         currentUserProducts.map((product, idx) => (
           <Col key={idx} style={{ width: "15rem", margin: "2rem" }}>
             <Card
+              className="shadow"
               style={{
                 width: "15rem",
-                minHeight: "25",
+                minHeight: "25rem",
                 margin: "2rem",
               }}
             >
@@ -40,7 +41,11 @@ const ProductUserIndex = ({ products }) => {
                 <img id="product-card-image" alt="Sample" src={product.image} />
               </NavLink>
 
-              <CardBody>
+              <CardBody
+                style={{
+                  backgroundColor: "#ded8d1",
+                }}
+              >
                 <CardTitle tag="h5">{product.title}</CardTitle>
                 <CardText className="text-left"> Ð: {product.price}</CardText>
                 <Row className="d-flex justify-content-around">

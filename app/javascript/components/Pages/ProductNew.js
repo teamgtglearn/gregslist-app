@@ -22,7 +22,10 @@ const ProductNew = ({ addProducts, props: { current_user } }) => {
   };
 
   return (
-    <Form className="p-5 m-5">
+    <Form
+      className="p-5 m-5 border shadow"
+      style={{ width: "62vw", backgroundColor: "#ded8d1" }}
+    >
       <FormGroup row>
         <Label for="title" sm={2}>
           Product Title
