@@ -43,13 +43,11 @@ const App = (props) => {
   };
 
   const deleteProduct = (id) => {
-
     fetch(`/products/${id}`, { method: "DELETE" })
       .then((response) => response.json())
       .then(() => readProducts())
-      .catch((errors) => console.log(errors))
-  }
-
+      .catch((errors) => console.log(errors));
+  };
 
   return (
     <BrowserRouter>
@@ -73,7 +71,12 @@ const App = (props) => {
             ></Route>
             <Route
               path="/index/:id"
-              element={<ProductUserIndex products={products} deleteProduct={deleteProduct} />}
+              element={
+                <ProductUserIndex
+                  products={products}
+                  deleteProduct={deleteProduct}
+                />
+              }
             ></Route>
             <Route
               path="/show/:id"
