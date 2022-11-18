@@ -19,7 +19,10 @@ const Header = (props) => {
         </Col>
       )}
       {props.logged_in && (
-        <Col md={6} style={{ display: "flex", alignItems: "center" }}>
+        <Col
+          md={3}
+          style={{ display: "flex", alignItems: "center", paddingLeft: "2rem" }}
+        >
           <h2>Hello, {userName}</h2>
         </Col>
       )}
