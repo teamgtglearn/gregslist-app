@@ -41,24 +41,17 @@ const App = (props) => {
       .catch((errors) => console.log("errors", errors));
   };
 
-  const updateProduct = async (editPrd,id) => {
-    console.log(editPrd,'App.js')
+  const updateProduct = async (editPrd, id) => {
     const settings = {
-      method: 'PUT',
+      method: "PUT",
       headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(editPrd)
-  };
-    try {
-      const response = await fetch(`/products/${id}`, settings)
-      const data = response.json()
-      setProducts(data)
-      readProducts()
-    } catch (error) {
-      console.log(error)
-    }
+      body: JSON.stringify(editPrd),
+    };
+    await fetch(`/products/${id}`, settings);
+    readProducts();
   };
 
   const deleteProduct = (id) => {
@@ -103,10 +96,13 @@ const App = (props) => {
             ></Route>
             <Route
               path="/edit/:id"
-              element={<ProductEdit
-                products={products}
-                props={props}
-                updateProduct={updateProduct} />}
+              element={
+                <ProductEdit
+                  products={products}
+                  props={props}
+                  updateProduct={updateProduct}
+                />
+              }
             ></Route>
             <Route
               path="/new"
