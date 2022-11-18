@@ -10,7 +10,7 @@ import {
   Button,
 } from "reactstrap";
 
-const ProductUserIndex = ({ products }) => {
+const ProductUserIndex = ({ products , deleteProduct}) => {
   const [currentUserProducts, setCurrentUserProducts] = useState([]);
   const { id } = useParams();
 
@@ -45,7 +45,7 @@ const ProductUserIndex = ({ products }) => {
                 <CardText className="text-left"> Ð: {product.price}</CardText>
                 <Row className="d-flex justify-content-around">
                   <Col className="d-flex justify-content-start">
-                    <a href={`/delete/${product.id}`}>
+                    <a onClick={()=> deleteProduct(product.id)}>
                       <Button>Delete</Button>
                     </a>
                   </Col>
