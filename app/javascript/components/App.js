@@ -20,7 +20,7 @@ const App = (props) => {
     readProducts();
   }, []);
 
-  const readProducts = () => {
+const readProducts = () => {
     fetch("/products")
       .then((response) => response.json())
       .then((data) => {
@@ -28,6 +28,19 @@ const App = (props) => {
       })
       .catch((error) => console.log(error));
   };
+
+  const addProducts =(newProduct) => {
+    fetch("/products",{
+      body: JSON.stringify(newProduct),
+      headers:{
+        "Content-Type" : "application/json"
+      },
+      method: "POST"
+    })
+    .then((response) => response.json())
+    .then(() => readProducts())
+    .catch((errors) => console.log("errors",errors))
+  }
 
   return (
     <BrowserRouter>
@@ -58,7 +71,7 @@ const App = (props) => {
               element={<ProductShow products={products} />}
             ></Route>
             <Route path="/edit" element={<ProductEdit />}></Route>
-            <Route path="/new" element={<ProductNew />}></Route>
+            <Route path="/new" element={<ProductNew addProducts={addProducts} props={props} />}></Route>
             <Route path="/about" element={<AboutUs />}></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>

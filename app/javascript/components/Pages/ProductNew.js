@@ -1,7 +1,30 @@
 import React from "react";
-import { Form, FormGroup, Label, Col, Input } from "reactstrap";
+import { Form, FormGroup, Label, Col, Input, Button } from "reactstrap";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const ProductNew = () => {
+const ProductNew = ({ addProducts, current_user }) => {
+
+  const navigate = useNavigate()
+
+  const[newProduct , setNewProduct] = useState({
+    title:"",
+    description:"",
+    price:0,
+    image:"",
+    user_id:current_user.id
+  })
+
+
+  const handleChange = (e) => {
+    setNewProduct({ ...newProduct, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = () => {
+    addProducts(newProduct)
+    navigate("/index")
+  }
+
   return (
     <Form className="p-5 m-5">
       <FormGroup row>
@@ -11,9 +34,10 @@ const ProductNew = () => {
         <Col sm={6}>
           <Input
             id="title"
-            name="tile"
+            name="title"
             placeholder="type here..."
             type="text"
+            onChange={handleChange}
           />
         </Col>
       </FormGroup>
@@ -27,6 +51,7 @@ const ProductNew = () => {
             name="description"
             placeholder="type here..."
             type="textarea"
+            onChange={handleChange}
           />
         </Col>
       </FormGroup>
@@ -40,6 +65,7 @@ const ProductNew = () => {
             name="price"
             placeholder="type here..."
             type="text"
+            onChange={handleChange}
           />
         </Col>
       </FormGroup>
@@ -53,10 +79,12 @@ const ProductNew = () => {
             name="image"
             placeholder="type here..."
             type="text"
+            onChange={handleChange}
           />
         </Col>
       </FormGroup>
-    </Form>
+      <Button onClick={handleSubmit}> Add Product</Button>
+    </Form >
   );
 };
 
