@@ -15,7 +15,6 @@ import "./App.css";
 
 const App = (props) => {
   const [products, setProducts] = useState([]);
-  console.log(props);
   useEffect(() => {
     readProducts();
   }, []);
@@ -28,7 +27,7 @@ const App = (props) => {
       })
       .catch((error) => console.log(error));
   };
-
+  
   const addProducts = (newProduct) => {
     fetch("/products", {
       body: JSON.stringify(newProduct),

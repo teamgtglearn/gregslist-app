@@ -22,7 +22,7 @@ const ProductUserIndex = ({ products, deleteProduct }) => {
     let currentArr = products?.filter((product) =>
       product.user_id == id ? product : null
     );
-    if (currentArr?.length > 0) return setCurrentUserProducts(currentArr);
+    if (currentArr?.length >= 0) return setCurrentUserProducts(currentArr);
   };
   return (
     <Row style={{ display: "flex", flexWrap: "wrap", paddingRight: "4rem" }}>
