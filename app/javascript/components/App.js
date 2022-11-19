@@ -27,7 +27,7 @@ const App = (props) => {
       })
       .catch((error) => console.log(error));
   };
-  
+
   const addProducts = (newProduct) => {
     fetch("/products", {
       body: JSON.stringify(newProduct),
@@ -39,6 +39,19 @@ const App = (props) => {
       .then((response) => response.json())
       .then(() => readProducts())
       .catch((errors) => console.log("errors", errors));
+  };
+
+  const updateProduct = async (editPrd, id) => {
+    const settings = {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(editPrd),
+    };
+    await fetch(`/products/${id}`, settings);
+    readProducts();
   };
 
   const deleteProduct = (id) => {
@@ -84,7 +97,16 @@ const App = (props) => {
               path="/show/:id"
               element={<ProductShow products={products} />}
             ></Route>
-            <Route path="/edit" element={<ProductEdit />}></Route>
+            <Route
+              path="/edit/:id"
+              element={
+                <ProductEdit
+                  products={products}
+                  props={props}
+                  updateProduct={updateProduct}
+                />
+              }
+            ></Route>
             <Route
               path="/new"
               element={<ProductNew addProducts={addProducts} props={props} />}

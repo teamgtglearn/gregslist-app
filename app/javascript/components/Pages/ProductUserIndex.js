@@ -19,6 +19,7 @@ const ProductUserIndex = ({ products, deleteProduct }) => {
   }, [products]);
 
   const checkCurrentUserProducts = () => {
+    console.log(products)
     let currentArr = products?.filter((product) =>
       product.user_id == id ? product : null
     );
