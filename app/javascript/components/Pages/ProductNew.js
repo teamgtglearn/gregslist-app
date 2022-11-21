@@ -23,8 +23,8 @@ const ProductNew = ({ addProducts, props: { current_user } }) => {
 
   return (
     <Form
-      className="p-5 m-5 border shadow"
-      style={{ width: "62vw", backgroundColor: "#ded8d1" }}
+      className=" p-5 m-5 border shadow"
+      style={{ width: "50vw", backgroundColor: "#ded8d1" }}
     >
       <FormGroup row>
         <Label for="title" sm={2}>
@@ -82,7 +82,10 @@ const ProductNew = ({ addProducts, props: { current_user } }) => {
           />
         </Col>
       </FormGroup>
-      <Button onClick={handleSubmit}> Add Product</Button>
+      <Button onClick={handleSubmit} className="mt-5">
+        {" "}
+        Add Product
+      </Button>
     </Form>
   );
 };
