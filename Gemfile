@@ -74,3 +74,7 @@ gem "devise", "~> 4.8"
 
 gem "bootstrap", "~> 5.2"
 gem 'devise-bootstrapped'
+
+gem 'importmap-rails'
+
+gem 'jsbundling-rails'
