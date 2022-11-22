@@ -13,7 +13,6 @@ const ProductEdit = ({ products, updateProduct, props: { current_user } }) => {
     setEditPrd(editProduct);
   }, [products]);
 
-  console.log(editPrd);
   const handleChange = (e) => {
     setEditPrd({
       ...editPrd,
@@ -23,7 +22,6 @@ const ProductEdit = ({ products, updateProduct, props: { current_user } }) => {
   };
 
   const handleSubmit = () => {
-    console.log(editPrd);
     updateProduct(editPrd, id);
     navigate(`/index/${current_user.id}`);
   };

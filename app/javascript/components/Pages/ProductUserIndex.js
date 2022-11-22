@@ -19,7 +19,6 @@ const ProductUserIndex = ({ products, deleteProduct }) => {
   }, [products]);
 
   const checkCurrentUserProducts = () => {
-    console.log(products)
     let currentArr = products?.filter((product) =>
       product.user_id == id ? product : null
     );
@@ -51,7 +50,9 @@ const ProductUserIndex = ({ products, deleteProduct }) => {
                 <CardText className="text-left"> Ð: {product.price}</CardText>
                 <Row className="d-flex justify-content-around">
                   <Col className="d-flex justify-content-start">
-                    <Button onClick={() => deleteProduct(product.id)}>Delete</Button>
+                    <Button onClick={() => deleteProduct(product.id)}>
+                      Delete
+                    </Button>
                   </Col>
                   <Col className="d-flex justify-content-end">
                     <a href={`/edit/${product.id}`}>

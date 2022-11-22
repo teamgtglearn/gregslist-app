@@ -12,7 +12,8 @@ product_seeds = {
     "title": "Back2Future Truck",
     "description": "Marty McFly's 1985 Toyota Tacoma!! Tastefully modified and a super capable to go Back to the Future. Needs nothing but a new owner!",
     "price": 709654,
-    "image": "https://silodrome.com/wp-content/uploads/2021/10/Back-To-The-Future-Toyota-Truck-e1633601386486.jpg"
+    "image": "https://silodrome.com/wp-content/uploads/2021/10/Back-To-The-Future-Toyota-Truck-e1633601386486.jpg",
+    "user_id": 1
 
 },
 {
@@ -20,54 +21,56 @@ product_seeds = {
     "title": "YT-1300 Light Freighter",
     "description": "Image is an older picture , currently in-operable. It needs a new Quadex power core to get it up and running. Not a project, low-ballers welcome.",
     "price": 2394872,
-    "image": "https://www.golfdigest.com/content/dam/images/golfdigest/fullset/2018/04/16/5ad4e8c370e68e282f66ed87_falcon.png"
-
+    "image": "https://www.golfdigest.com/content/dam/images/golfdigest/fullset/2018/04/16/5ad4e8c370e68e282f66ed87_falcon.png",
+    "user_id": 1
 },
 {
 
     "title": "PikaChu",
     "description": "My Pikachu had babies and this is the last one left. This cutie is the runt of the litter, so he's a little smaller than his siblings, but he has the strongest personality. Will include berries with adoption. Ask about my other Pokemons",
     "price": 62983,
-    "image": "https://cdn.vox-cdn.com/thumbor/HuJ4807J3vcVYQAPFBh_nHjIEP4=/0x0:1255x591/1200x800/filters:focal(493x281:693x481)/cdn.vox-cdn.com/uploads/chorus_image/image/62281193/Screen_Shot_2018_11_12_at_12.24.40_PM.0.png"
-
+    "image": "https://cdn.vox-cdn.com/thumbor/HuJ4807J3vcVYQAPFBh_nHjIEP4=/0x0:1255x591/1200x800/filters:focal(493x281:693x481)/cdn.vox-cdn.com/uploads/chorus_image/image/62281193/Screen_Shot_2018_11_12_at_12.24.40_PM.0.png",
+    "user_id": 1
 },
 {
 
     "title": "Gundam",
     "description": "Slightly used but otherwise brand new Gundam for sale! The full capabilities of can be disclosed to the buyer upon completion of transaction, but you can view the basics here: https://gundam.fandom.com/wiki/Gundam_Wiki:Technology Free shipping within 2 lightyears of earth.(Price upon request)",
     "price": 999999,
-    "image": "https://img.kyodonews.net/english/public/images/posts/ae6aaa18fca7838e0a6264898141e49c/photo_l.jpg"
-
+    "image": "https://img.kyodonews.net/english/public/images/posts/ae6aaa18fca7838e0a6264898141e49c/photo_l.jpg",
+    "user_id": 1
 },
 {
 
     "title": "Anti-Virus",
     "description": "The anti-virus is a medicine created by the Umbrella Corporation to treat those infected with T-virus. We have three different kinds, please indicate which kind you need. Price is per vial.",
     "price": 5000,
-    "image": "https://i.etsystatic.com/10713985/r/il/adf168/860357425/il_fullxfull.860357425_hbja.jpg"
-
+    "image": "https://i.etsystatic.com/10713985/r/il/adf168/860357425/il_fullxfull.860357425_hbja.jpg",
+    "user_id": 1
 },
 {
 
     "title": "Louisiana",
     "description": "Land for sale.  Pretty much half of everything West of the Mississippi River.  Need to sell ASAP!  Funding a war.",
     "price": 20000000,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/Louisiana_Purchase.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/Louisiana_Purchase.jpg",
+    "user_id": 1
 },
 {
 
     "title": "Statue of some dude",
     "description": "Statue of some dude by up and coming artist.",
     "price": 400,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/David_de_Miguel_Angel_-_Galeria_de_la_Academia_de_Florencia_-_04.jpg/220px-David_de_Miguel_Angel_-_Galeria_de_la_Academia_de_Florencia_-_04.jpg"
-
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/David_de_Miguel_Angel_-_Galeria_de_la_Academia_de_Florencia_-_04.jpg/220px-David_de_Miguel_Angel_-_Galeria_de_la_Academia_de_Florencia_-_04.jpg",
+    "user_id": 1
 },
 {
 
     "title": "NFT",
     "description": "If you know, you know... ",
     "price": 7239875,
-    "image": "https://pi.tedcdn.com/r/talkstar-assets.s3.amazonaws.com/production/playlists/playlist_61/07613083-d6c6-4a04-8aa0-857a61ed4791/objects_of_desire-2000x2000.jpg?"
+    "image": "https://pi.tedcdn.com/r/talkstar-assets.s3.amazonaws.com/production/playlists/playlist_61/07613083-d6c6-4a04-8aa0-857a61ed4791/objects_of_desire-2000x2000.jpg?",
+    "user_id": 1
 
 },
 {
