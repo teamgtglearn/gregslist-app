@@ -39,9 +39,11 @@ This is the most favorite page of our visitors. Here, visitors are enthralled an
 
 # Tools and Technologies
 
+This is React-in-Rails app
+
 ### **_Client-side (Front-End)_**
 
-The front-end of this project is built in React using create-react-app application. CSS styling and transitions are used to improve the user experience and to make the site mobile responsive (including landscape layout).
+The front-end of this project is built in React using Rails implementation of javascript. CSS and Reactstrap styling is used to improve the user experience and to make the site mobile responsive.
 
 ### **_Server-side (Back-End)_**
 
@@ -68,6 +70,9 @@ The below instructions can be followed if you want to run this project locally f
 - Clone the forked repository locally: git clone https://github.com/orgs/teamgtglearn/repositories
 
 ### **_Start Server and Client_**
+
+- Run Yarn to add all of the dependecies
+-
 
 # Authors
 
