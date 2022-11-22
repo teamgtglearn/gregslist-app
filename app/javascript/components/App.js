@@ -74,7 +74,8 @@ const App = (props) => {
         <Row
           className="bg-light border"
           style={{
-            minHeight: "82vh",
+            display: "flex",
+            minHeight: "85vh",
           }}
         >
           <Routes>
