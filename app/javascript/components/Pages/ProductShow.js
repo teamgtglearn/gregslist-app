@@ -1,37 +1,64 @@
 import React from "react";
 import { useParams, NavLink } from "react-router-dom";
-import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  Row,
+} from "reactstrap";
 
-const ProductShow = ({ products }) => {
+const ProductShow = ({ products, props: { current_user } }) => {
   const { id } = useParams();
   const currentProduct = products?.find((product) => product.id === +id);
 
   return (
-    <div>
-      <div>
-        {currentProduct && (
-          <Card style={{ width: "20rem" }}>
-            <img src={currentProduct.image} alt="image of a product" />
-            <CardBody>
-              <CardTitle tag="h5">
-                <p>Title: {currentProduct.title}</p>
-              </CardTitle>
-              <CardSubtitle>
-                <p>Description: {currentProduct.description}</p>
-              </CardSubtitle>
-              <CardSubtitle>
-                <p>Price: {currentProduct.price}</p>
-              </CardSubtitle>
-              <NavLink to={"/index"} className="nav-link">
-                <Button>Back to all Products</Button>
+    <div className="d-flex justify-content-center">
+      {currentProduct && (
+        <Card
+          className="mt-3 border-light shadow"
+          style={{ maxWidth: "30rem", height: "40rem" }}
+        >
+          <img
+            id="show-image"
+            src={currentProduct.image}
+            alt="image of a product"
+          />
+          <CardBody
+            style={{
+              backgroundColor: "#ded8d1",
+            }}
+          >
+            <CardTitle tag="h5">
+              <p>Title: {currentProduct.title}</p>
+            </CardTitle>
+            <CardSubtitle>
+              <p>Description: {currentProduct.description}</p>
+            </CardSubtitle>
+            <CardSubtitle>
+              <p>Price: Ð {currentProduct.price}</p>
+            </CardSubtitle>
+            <Row className="d-flex justify-content-center">
+              <Button
+                className="mb-3 bg-primary w-75"
+                onClick={() =>
+                  (window.location.href = `mailto:${current_user.email}`)
+                }
+              >
+                Contact Seller
+              </Button>
+
+              <NavLink
+                to={"/index"}
+                className="nav-link d-flex justify-content-center"
+              >
+                <Button className="w-75">Back to all Products</Button>
               </NavLink>
-              {/* <NavLink to={`/edit/${currentProduct.id}`} className="nav-link">
-             <Button>Edit Product</Button>
-           </NavLink> */}
-            </CardBody>
-          </Card>
-        )}
-      </div>
+            </Row>
+          </CardBody>
+        </Card>
+      )}
     </div>
   );
 };

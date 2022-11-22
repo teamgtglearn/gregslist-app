@@ -61,6 +61,9 @@ h3 {
   width: 15rem;
   max-height: 15rem;
 }
+#show-image {
+  max-height: 20rem;
+}
 
 /*=================  FOOTER ================== */
 
