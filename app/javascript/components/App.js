@@ -11,7 +11,7 @@ import ProductNew from "./Pages/ProductNew";
 import AboutUs from "./Pages/AboutUs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container, Row } from "reactstrap";
-import "./App.css";
+import "../../assets/stylesheets/App.css";
 
 const App = (props) => {
   const [products, setProducts] = useState([]);
