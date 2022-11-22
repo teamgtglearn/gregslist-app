@@ -18,7 +18,6 @@ const App = (props) => {
   useEffect(() => {
     readProducts();
   }, []);
-  console.log(props);
   const readProducts = () => {
     fetch("/products")
       .then((response) => response.json())
