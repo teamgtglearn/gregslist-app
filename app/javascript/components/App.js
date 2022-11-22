@@ -18,7 +18,7 @@ const App = (props) => {
   useEffect(() => {
     readProducts();
   }, []);
-
+  console.log(props);
   const readProducts = () => {
     fetch("/products")
       .then((response) => response.json())
@@ -95,7 +95,7 @@ const App = (props) => {
             ></Route>
             <Route
               path="/show/:id"
-              element={<ProductShow products={products} />}
+              element={<ProductShow products={products} props={props} />}
             ></Route>
             <Route
               path="/edit/:id"
