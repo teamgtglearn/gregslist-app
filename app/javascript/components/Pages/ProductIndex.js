@@ -33,7 +33,7 @@ const ProductIndex = ({ products }) => {
               <CardTitle tag="h5">{product.title}</CardTitle>
               <CardText className="text-left"> Ð: {product.price}</CardText>
               <a href={`/show/${product.id}`}>
-                <Button>Contact Seller</Button>
+                <Button>See More</Button>
               </a>
             </CardBody>
           </Card>
