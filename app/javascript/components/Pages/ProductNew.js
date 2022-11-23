@@ -22,68 +22,79 @@ const ProductNew = ({ addProducts, props: { current_user } }) => {
   };
 
   return (
-    <Form
-      className="p-5 m-5 border shadow"
-      style={{ width: "62vw", backgroundColor: "#ded8d1" }}
+    <div
+      className="m-5 d-flex flex-column align-items-center"
+      style={{ width: "85%" }}
     >
-      <FormGroup row>
-        <Label for="title" sm={2}>
-          Product Title
-        </Label>
-        <Col sm={6}>
-          <Input
-            id="title"
-            name="title"
-            placeholder="type here..."
-            type="text"
-            onChange={handleChange}
-          />
-        </Col>
-      </FormGroup>
-      <FormGroup row>
-        <Label for="description" sm={2}>
-          Product Description
-        </Label>
-        <Col sm={6}>
-          <Input
-            id="description"
-            name="description"
-            placeholder="type here..."
-            type="textarea"
-            onChange={handleChange}
-          />
-        </Col>
-      </FormGroup>
-      <FormGroup row>
-        <Label for="title" sm={2}>
-          Product Price
-        </Label>
-        <Col sm={6}>
-          <Input
-            id="price"
-            name="price"
-            placeholder="type here..."
-            type="text"
-            onChange={handleChange}
-          />
-        </Col>
-      </FormGroup>
-      <FormGroup row>
-        <Label for="image" sm={2}>
-          Image URL
-        </Label>
-        <Col sm={6}>
-          <Input
-            id="image"
-            name="image"
-            placeholder="type here..."
-            type="text"
-            onChange={handleChange}
-          />
-        </Col>
-      </FormGroup>
-      <Button onClick={handleSubmit}> Add Product</Button>
-    </Form>
+      <Form
+        className="pt-5 pb-3 mt-3 border border-light shadow"
+        style={{
+          backgroundColor: "#ded8d1",
+          width: "85%",
+          borderRadius: "10px",
+        }}
+      >
+        <FormGroup className="d-flex justify-content-center">
+          <Label for="title" sm={2}>
+            Product Title
+          </Label>
+          <Col sm={6}>
+            <Input
+              id="title"
+              name="title"
+              placeholder="type here..."
+              type="text"
+              onChange={handleChange}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup className="d-flex justify-content-center">
+          <Label for="description" sm={2}>
+            Product Description
+          </Label>
+          <Col sm={6}>
+            <Input
+              id="description"
+              name="description"
+              placeholder="type here..."
+              type="textarea"
+              onChange={handleChange}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup className="d-flex justify-content-center">
+          <Label for="title" sm={2}>
+            Product Price
+          </Label>
+          <Col sm={6}>
+            <Input
+              id="price"
+              name="price"
+              placeholder="type here..."
+              type="text"
+              onChange={handleChange}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup className="d-flex justify-content-center">
+          <Label for="image" sm={2}>
+            Image URL
+          </Label>
+          <Col sm={6}>
+            <Input
+              id="image"
+              name="image"
+              placeholder="type here..."
+              type="text"
+              onChange={handleChange}
+            />
+          </Col>
+        </FormGroup>
+        <div className="d-flex justify-content-center mt-5">
+          <Button onClick={handleSubmit}> Add Product</Button>
+        </div>
+      </Form>
+    </div>
   );
 };
 

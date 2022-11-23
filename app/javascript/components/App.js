@@ -74,6 +74,7 @@ const App = (props) => {
           className="bg-light border"
           style={{
             display: "flex",
+            justifyContent: "center",
             minHeight: "85vh",
           }}
         >

@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav, NavItem, Col, Button, Row } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navigation = ({
   logged_in,
@@ -9,6 +9,7 @@ const Navigation = ({
   sign_in_route,
   sign_out_route,
 }) => {
+  const { pathname } = useLocation();
   return (
     <Nav style={{ minWidth: "100%" }}>
       <Col>
@@ -16,7 +17,11 @@ const Navigation = ({
           <NavLink
             to="/"
             className="py-0 px-3"
-            style={{ color: "black", fontSize: "small" }}
+            style={({ isActive }) =>
+              isActive
+                ? { color: "blue", fontSize: "small" }
+                : { color: "black", fontSize: "small" }
+            }
           >
             Home
           </NavLink>
@@ -25,7 +30,11 @@ const Navigation = ({
           <NavLink
             to="/index"
             className="py-0 px-3"
-            style={{ color: "black", fontSize: "small" }}
+            style={() =>
+              pathname == "/index"
+                ? { color: "blue", fontSize: "small" }
+                : { color: "black", fontSize: "small" }
+            }
           >
             All Products
           </NavLink>
@@ -34,7 +43,11 @@ const Navigation = ({
           <NavLink
             to="/about"
             className="py-0 px-3"
-            style={{ color: "black", fontSize: "small" }}
+            style={({ isActive }) =>
+              isActive
+                ? { color: "blue", fontSize: "small" }
+                : { color: "black", fontSize: "small" }
+            }
           >
             About Us
           </NavLink>
@@ -78,7 +91,11 @@ const Navigation = ({
               <NavLink
                 to="/new"
                 className="py-0 px-3"
-                style={{ color: "black", fontSize: "small" }}
+                style={({ isActive }) =>
+                  isActive
+                    ? { color: "blue", fontSize: "small" }
+                    : { color: "black", fontSize: "small" }
+                }
               >
                 Add product
               </NavLink>
@@ -86,8 +103,13 @@ const Navigation = ({
             <NavItem>
               <NavLink
                 to={"/index/" + current_user.id}
+                isActive={() => ["/events", "/myevents"].includes(pathname)}
                 className="py-0 px-3"
-                style={{ color: "black", fontSize: "small" }}
+                style={({ isActive }) =>
+                  isActive
+                    ? { color: "blue", fontSize: "small" }
+                    : { color: "black", fontSize: "small" }
+                }
               >
                 My products
               </NavLink>
