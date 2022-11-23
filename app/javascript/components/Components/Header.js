@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Navigation from "./Navigation";
 import { Row, Col } from "reactstrap";
 import logo from "../assets/gregslist-logo.png";
 
 const Header = (props) => {
-  // converting the user email into user name (everything before @ sign)
   let userName;
   if (props.current_user !== null) {
     let str = props.current_user.email;

@@ -49,9 +49,9 @@ const AboutUs = () => {
         >
           <CardImg alt="Card image cap" src={profilePic1} top width="100%" />
           <CardBody>
-            <CardTitle tag="h5">UX / UI Designer</CardTitle>
+            <CardTitle tag="h5">Guan Chan</CardTitle>
             <CardSubtitle className="mb-2 text-muted" tag="h6">
-              Guan Chan
+              UX / UI Designer
             </CardSubtitle>
             <CardText>Building a better tomorrow with code and clay</CardText>
             <Row
@@ -79,14 +79,19 @@ const AboutUs = () => {
             margin: "2%",
           }}
         >
-          <CardImg alt="Card image cap" src={profilePic2} top width="100%" />
+          <CardImg
+            alt="Card image cap"
+            src="https://picsum.photos/318/180"
+            top
+            width="100%"
+          />
           <CardBody>
-            <CardTitle tag="h5">Tech Lead</CardTitle>
+            <CardTitle tag="h5">Tawn Peou</CardTitle>
             <CardSubtitle className="mb-2 text-muted" tag="h6">
-              Goran
+              Project Manager
             </CardSubtitle>
             <CardText>
-              Building lots of great software to help everyday life
+              Ready to rock and roll, excited to build the coolest tech.
             </CardText>
             <Row
               className="border border-dark"
@@ -97,7 +102,7 @@ const AboutUs = () => {
               }}
             >
               <p className="border mb-0 text-end">
-                Couldn't do this without Tawn and G-money!
+                I'm TawnChan (Zen master of the group)
               </p>
             </Row>
           </CardBody>
@@ -113,19 +118,14 @@ const AboutUs = () => {
             margin: "2%",
           }}
         >
-          <CardImg
-            alt="Card image cap"
-            src="https://picsum.photos/318/180"
-            top
-            width="100%"
-          />
+          <CardImg alt="Card image cap" src={profilePic2} top width="100%" />
           <CardBody>
-            <CardTitle tag="h5">Project Manager</CardTitle>
+            <CardTitle tag="h5">Goran</CardTitle>
             <CardSubtitle className="mb-2 text-muted" tag="h6">
-              Tawn Peou
+              Tech Lead
             </CardSubtitle>
             <CardText>
-              Ready to rock and roll, excited to build the coolest tech.
+              Building lots of great software to help everyday life
             </CardText>
             <Row
               className="border border-dark"
@@ -136,7 +136,7 @@ const AboutUs = () => {
               }}
             >
               <p className="border mb-0 text-end">
-                I'm TawnChan (Zen master of the group)
+                Couldn't do this without Tawn and G-money!
               </p>
             </Row>
           </CardBody>

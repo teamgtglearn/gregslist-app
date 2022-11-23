@@ -60,9 +60,11 @@ h3 {
 #product-card-image {
   width: 15rem;
   max-height: 15rem;
+  border-radius: 10px 10px 0 0;
 }
 #show-image {
   max-height: 20rem;
+  border-radius: 15px 15px 0 0;
 }
 
 /*=================  FOOTER ================== */

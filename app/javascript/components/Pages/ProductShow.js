@@ -18,7 +18,7 @@ const ProductShow = ({ products, props: { current_user } }) => {
       {currentProduct && (
         <Card
           className="mt-3 border-light shadow"
-          style={{ maxWidth: "30rem", height: "40rem" }}
+          style={{ maxWidth: "30rem", height: "40rem", borderRadius: "15px" }}
         >
           <img
             id="show-image"
@@ -28,6 +28,8 @@ const ProductShow = ({ products, props: { current_user } }) => {
           <CardBody
             style={{
               backgroundColor: "#ded8d1",
+              borderEndStartRadius: "15px",
+              borderEndEndRadius: "15px",
             }}
           >
             <CardTitle tag="h5">
