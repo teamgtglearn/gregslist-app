@@ -20,14 +20,20 @@ const ProductIndex = ({ products }) => {
             style={{
               width: "15rem",
               margin: "2rem",
+              borderRadius: "15px",
             }}
           >
-            <NavLink to={"/show/" + product.id} style={{ display: "flex" }}>
+            <NavLink
+              to={"/show/" + product.id}
+              style={{ display: "flex", borderRadius: "10px" }}
+            >
               <img id="product-card-image" alt="Sample" src={product.image} />
             </NavLink>
             <CardBody
               style={{
                 backgroundColor: "#ded8d1",
+                borderEndStartRadius: "14px",
+                borderEndEndRadius: "14px",
               }}
             >
               <CardTitle tag="h5">{product.title}</CardTitle>
