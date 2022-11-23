@@ -6,7 +6,7 @@ import heroImage from "../assets/Hero.png";
 const Home = () => {
   return (
     <Row>
-      <div className="hero-container">
+      <div className="hero-container d-flex justify-content-center">
         <img src={heroImage} className="hero-image" />
         <div className="overlay">
           <h3>Welcome to Gregslist</h3>

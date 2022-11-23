@@ -23,7 +23,9 @@ const Header = (props) => {
           md={3}
           style={{ display: "flex", alignItems: "center", paddingLeft: "2rem" }}
         >
-          <h2>Hello, {userName}</h2>
+          <h2 style={{ fontFamily: "Overpass", fontSize: "2rem" }}>
+            Hello, {userName}
+          </h2>
         </Col>
       )}
       <Col className="d-flex justify-content-end align-items-center">
