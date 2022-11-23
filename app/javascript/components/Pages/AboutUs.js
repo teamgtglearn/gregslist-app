@@ -24,14 +24,23 @@ const AboutUs = () => {
           border: "black",
         }}
       >
-        <h1>Meet Team GTG</h1>
+        <h1>Thank You, from Team GTG</h1>
         <h6>
-          Gregslist is an e-commmece for anyone who would like to sell thier
-          product. We have some great features that will help you sell your
-          products You will have a cutom store front that will display all of
-          your products Show your freinds and famliy have them support your
-          cuase and buy your work Sign up today and start uploading your produt
-          for the rest of world
+          <p>
+            We created Gregslist with our intentions and focus on Unity. The
+            World is constantly changing and we are fortunate to be at the point
+            where the experiential reality of a New World is coming into
+            existence right before our very eyes, The Digital New World. A world
+            where exploration of thoughts, ideas and imaginations can be
+            experienced and shared differently from the previous World before.
+          </p>
+          <p>
+            Gregslist is a platform used to connect these two worlds together
+            through interaction and commerce. Our goal is not only to allow the
+            World to transact digital and non-digital assets, but as a platform,
+            you, our partner and digital companion, can use to stand on, unite,
+            and share your visions and ambitions in this New World... Together.
+          </p>
         </h6>
       </Row>
 

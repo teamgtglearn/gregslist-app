@@ -9,7 +9,7 @@ import {
   Row,
 } from "reactstrap";
 
-const ProductShow = ({ products, props: { current_user } }) => {
+const ProductShow = ({ products, props }) => {
   const { id } = useParams();
   const currentProduct = products?.find((product) => product.id === +id);
 
@@ -44,9 +44,11 @@ const ProductShow = ({ products, props: { current_user } }) => {
             <Row className="d-flex justify-content-center">
               <Button
                 className="mb-3 bg-primary w-75"
-                onClick={() =>
-                  (window.location.href = `mailto:${current_user.email}`)
-                }
+                onClick={() => {
+                  props.current_user
+                    ? (window.location.href = `mailto:${props.current_user.email}`)
+                    : (window.location.href = `mailto:guandoge@chan.com`);
+                }}
               >
                 Contact Seller
               </Button>
