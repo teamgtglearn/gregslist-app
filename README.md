@@ -2,7 +2,7 @@
 
 Gregslist App is a web application built with a React front-end and Rails back-end.
 
-Try out the live version here: [GregsList App](https://gregs-list-app.herokuapp.com/index)
+Try out the live version here: [GregsList App](https://gregs-list-app.herokuapp.com)
 
 # About the App
 
