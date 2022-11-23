@@ -12,6 +12,7 @@ import {
 
 import profilePic1 from "../assets/prof_img.jpg";
 import profilePic2 from "../assets/goran.png";
+import profilePic3 from "../assets/tawn.jpg";
 
 const AboutUs = () => {
   return (
@@ -90,9 +91,10 @@ const AboutUs = () => {
         >
           <CardImg
             alt="Card image cap"
-            src="https://picsum.photos/318/180"
+            src={profilePic3}
             top
             width="100%"
+            maxHeight="18rem"
           />
           <CardBody>
             <CardTitle tag="h5">Tawn Peou</CardTitle>
