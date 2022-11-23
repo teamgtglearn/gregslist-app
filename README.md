@@ -4,9 +4,6 @@ Gregslist App is a web application built with a React front-end and Rails back-e
 
 Try out the live version here: [GregsList App](https://gregs-list-app.herokuapp.com/index)
 
-
-![Screen Shot 2022-11-23 at 3 18 38 PM](https://user-images.githubusercontent.com/80366503/203662458-b06a68bc-78ad-41cf-b17e-ad4ca7ebd3b7.png)
-
 # About the App
 
 This app is based on our assessment that there is a patch missing in the e-commerce industry; E-commerce apps and platforms are abundant today; from giants like Amazon and Alibaba to mom and pop websites. What sets Gregslist apart from the rest is the users ability to use crypto as a form of currency complete their transactions safely, securely, and if choose to.. anonymously.
@@ -18,6 +15,8 @@ GregsList features:
 - Item prices are displayed in both dollars and in Doge.
 - If a visitor want to begin purchasing or selling products, they would need to create an account and then would be able to access their own personal account information.
   There are 5 pages to this application: Home, All Products, Add Products (authorized users), My Products (authorized users).
+
+![Screen Shot 2022-11-23 at 3 18 38 PM](https://user-images.githubusercontent.com/80366503/203662458-b06a68bc-78ad-41cf-b17e-ad4ca7ebd3b7.png)
 
 ### Home Page
 
@@ -50,7 +49,7 @@ The front-end of this project is built in React using Rails implementation of ja
 
 ### **_Server-side (Back-End)_**
 
-The back-end for this site is created using Rails with full CRUD functionality with 4 routes. Users are able to Create new Listings, Read Listings, Update Listings, and Delete Listings.
+The back-end for this site is created using Rails and Postgresql with full CRUD functionality. Users are able to Create new Listings, Read Listings, Update Listings, and Delete Listings.
 
 - “Create” route is used to create and add a new product to the main index page as well as the user’s own personal listings.
 - “Read” route is used to return all of the products that are currently listed on GregsList.
@@ -74,8 +73,9 @@ The below instructions can be followed if you want to run this project locally f
 
 ### **_Start Server and Client_**
 
-- Run Yarn to add all of the dependecies
--
+- Run Yarn
+- Run rails db:create
+- Run rails s
 
 # Authors
 
