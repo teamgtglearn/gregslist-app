@@ -11,7 +11,7 @@ const Navigation = ({
 }) => {
   const { pathname } = useLocation();
   return (
-    <Nav style={{ minWidth: "100%" }}>
+    <Nav style={{ minWidth: "100%", paddingLeft: "4rem" }}>
       <Col>
         <NavItem>
           <NavLink
