@@ -45,6 +45,7 @@ const ProductNew = ({ addProducts, props: { current_user } }) => {
               placeholder="type here..."
               type="text"
               onChange={handleChange}
+              required
             />
           </Col>
         </FormGroup>
@@ -59,6 +60,7 @@ const ProductNew = ({ addProducts, props: { current_user } }) => {
               placeholder="type here..."
               type="textarea"
               onChange={handleChange}
+              required
             />
           </Col>
         </FormGroup>
@@ -73,6 +75,7 @@ const ProductNew = ({ addProducts, props: { current_user } }) => {
               placeholder="type here..."
               type="text"
               onChange={handleChange}
+              required
             />
           </Col>
         </FormGroup>
@@ -87,6 +90,7 @@ const ProductNew = ({ addProducts, props: { current_user } }) => {
               placeholder="type here..."
               type="text"
               onChange={handleChange}
+              required
             />
           </Col>
         </FormGroup>

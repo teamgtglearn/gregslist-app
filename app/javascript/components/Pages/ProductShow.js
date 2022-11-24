@@ -47,7 +47,7 @@ const ProductShow = ({ products, props }) => {
                 onClick={() => {
                   props.current_user
                     ? (window.location.href = `mailto:${props.current_user.email}`)
-                    : (window.location.href = `mailto:guandoge@chan.com`);
+                    : (window.location.href = `https://gregs-list-app.herokuapp.com/users/sign_in`);
                 }}
               >
                 Contact Seller

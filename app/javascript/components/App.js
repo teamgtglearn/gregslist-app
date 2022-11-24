@@ -63,9 +63,9 @@ const App = (props) => {
   return (
     <BrowserRouter>
       <Container
-        className="bg-gray border mx-auto m-2"
+        className="bg-gray border mx-auto m-0"
         fluid="md"
-        style={{ display: "block", width: "70vw" }}
+        style={{ display: "block", width: "70vw", height: "100vh" }}
       >
         <Row className="bg-light" style={{ minHeight: "13vh" }}>
           <Header {...props} />
