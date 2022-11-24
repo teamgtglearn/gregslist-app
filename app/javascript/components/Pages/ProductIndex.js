@@ -13,7 +13,7 @@ import {
 const ProductIndex = ({ products }) => {
   return (
     <Row style={{ display: "flex", flexWrap: "wrap", paddingRight: "4rem" }}>
-      {products?.map((product, idx) => (
+      {products?.reverse().map((product, idx) => (
         <Col key={idx} style={{ width: "15rem", margin: "2rem" }}>
           <Card
             className="shadow"
