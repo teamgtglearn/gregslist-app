@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "./Navigation";
 import WeatherAPI from "./WeatherAPI.js";
 import { Row, Col } from "reactstrap";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/gregslist-logo.png";
 
 const Header = (props) => {
@@ -15,7 +16,9 @@ const Header = (props) => {
     <Row>
       {!props.logged_in && (
         <Col md={4} style={{ display: "flex", alignItems: "center" }}>
-          <img id="logo" src={logo} />
+          <NavLink to="/">
+            <img id="logo" src={logo} />
+          </NavLink>
         </Col>
       )}
       {props.logged_in && (
